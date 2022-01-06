@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data visualization with chart.js</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+   
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar_1">
+                <div class="menu_1">
+                    <div class="move_search">
+                        <div class="move">
+                            <img src="assets\chevron-up-solid.svg" alt="">
+                            <img src="assets\chevron-down-solid.svg" alt="">
+                        </div>
+                        <div class="search">
+                            <img src="assets\search-solid.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="menu_1_2">
+                        <img src="assets\home-solid.svg" alt="">
+                        <img src="assets\inbox-solid.svg" alt="">
+                        <img src="assets\link-solid.svg" alt="">
+                        <img src="assets\user-friends-solid.svg" alt="">
+                        <img src="assets\credit-card-solid.svg" alt="">
+                    </div>
+                </div>
+                <div class="menu_2">
+                    <p class="m2_p1">FN</p>
+                    <p class="m2_p2">JS</p>
+                    <p class="m2_p3">LG</p>
+                    <p class="m2_p4">AW</p>
+                </div>
+                <div class="menu_3">
+                    <div>
+                        <img src="assets\angle-right-solid.svg" alt="">
+                    </div>
+                </div>
+                <div id="menu-toggle" class="menu-toggle">
+
+                </div>
+            </div>
+            <div id="sidebar_2" class="sidebar_2 ">
+                <div class="top">
+                    <img id="menu-toggle-2" src="assets\angle-left-solid.svg" alt="">
+                    <div class="siderbar_2_title">
+                        <img src="assets\FCMB-logo.jpg" alt="">
+                        <h2>FCMB: Mobile</h2>
+                    </div>
+                    <p class="three">...</p>
+                </div>
+                <div class="workflow">
+                    <h3>Workflows</h3>
+                    <div class="select-style select_side">
+                    <select>
+                        <option value="Product dev">Product dev</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                </div>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li>Overview</li>
+                        <li>Action centre</li>
+                        <li>Apps</li>
+                        <li>Tasks</li>
+                        <li>Code review</li>
+                        <li>QA review</li>
+                        <li>Notes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="three_dots">
+                
+            </div>
+            <div class="heading">
+                <h1>Project stats</h1>
+                <div class="select-style">
+                    <select class="main_select">
+                    <option value="All time">All time</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    </select>
+                </div>
+            </div>
+            <div class="main_dashboard">
+                <div class="left">
+                    <div class="left_top">
+                        <div class="pr_size">
+                            <h3 class="board_h3">Average PR Size</h3>
+                            <hr>
+                            <div class="board_stats">
+                                <div>
+                                    <h4>968 <span>lines</span></h4>
+                                    <p>Line change</p>
+                                </div>
+                                <div>
+                                    <h4>240 <span>kb</span></h4>
+                                    <p>Size</p>
+                                </div>
+                            </div>
+                            <div class="board_per board_per_green">
+                                &#x2191; 
+                                <p>24%</p>
+                            </div>
+                        </div>
+                        <div class="ticket_dur">
+                            <h3 class="board_h3">Average Ticket Duration</h3>
+                            <hr>
+                            <div class="board_stats">
+                                <div>
+                                    <h4>36 <span>hours</span></h4>
+                                    <p>Hours Worked</p>
+                                </div>
+                            </div>
+                            <div class="board_per board_per_red">
+                                &#x2193; 
+                                <p>79%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="left_bottom">
+                        <h3 class="board_h3">Average PR Size</h3>
+                        <hr>
+                        <div class="chart-canvas">
+                            <div class="board_per board_per_green">
+                                &#x2193; 
+                                <p>24%</p>
+                            </div>
+                            <canvas id="cycleTime"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="right_top">
+                        <h3 class="board_h3">Average PR Size</h3>
+                        <hr>
+                        <div class="board_stats board_stats_right">
+                            <div class="stat">
+                                <h4>968 <span>lines</span></h4>
+                            </div>
+                            <div class="stat">
+                                <h4>54 <span>tickets</span></h4>
+                            </div>
+                            <div class="stat">
+                                <h4>4 <span>total weeks worked</span></h4>
+                            </div>
+                        </div>
+                        <div class="workbreakdown_canvas">
+                            <canvas id="workBreakdown"></canvas>
+                        </div>
+                    </div>
+                    <div class="right_bottom">
+                        <div class="rb_heading">
+                            <h3 class="board_h3">Average PR Size</h3>
+                            <div class="time_legend">
+                                <div class="time_legend_1">
+                                    <div></div>
+                                    <p>Idle</p>
+                                </div>
+                                <div class="time_legend_2">
+                                    <div></div>
+                                    <p>Productive</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="timebreakdown_canvas">
+                            <canvas id="timebreakdown"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://use.fontawesome.com/6ae14cfd37.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script  type="text/javascript" src="script.js"></script>
+</body>
+</html>
