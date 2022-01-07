@@ -1,6 +1,5 @@
 // Chart 1 Dougnut
 
-
 const labels = [
     '4hrs Coding',
     '8hrs Code Review',
@@ -31,12 +30,6 @@ const data = {
   }]
 };
 
-// var options = {
-//     title: { 
-//         display: true, text: "Cycle Time", fontSize: "24", fontFamily: "'Roboto', sans-serif"
-//     }
-// }
-
 const config = {
     type: 'doughnut',
     data: data,
@@ -58,7 +51,6 @@ const config = {
                 
             },
         },
-        // cutout: 50
     }
 };
 
@@ -67,7 +59,7 @@ const myChart = new Chart(
   config
 );
 
-/////////////////// Chart two/////////////////////////////////
+/////////////////// Chart two Straight Bar/////////////////////////////////
 
 const stackData = {
         labels: [""],
@@ -168,8 +160,7 @@ const myStackChart = new Chart(
 );
 
 
-/////////////////////////// Bar Chart ///////////////////////
-// setup 
+/////////////////////////// Multiple Bar Chart ///////////////////////
     const timeData = {
       labels: [
     'Coding',
@@ -200,7 +191,6 @@ const myStackChart = new Chart(
   }]
     };
 
-    // config 
     const timeConfig = {
       type: 'bar',
       data: timeData,
@@ -239,11 +229,11 @@ const myStackChart = new Chart(
 
     Chart.defaults.font.size = 10;
 
-    // render init block
     const myBarChart = new Chart(
       document.getElementById('timebreakdown'),
       timeConfig
     );
+
 
     /////////////// Open Nav /////////////////////
 let menu_toggle = document.getElementById('menu-toggle');
