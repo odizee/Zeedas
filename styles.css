@@ -44,8 +44,7 @@ html {
     
     body{
         font-family: 'Roboto', sans-serif;
-        width: 100%;
-        
+        width: 100%; 
     }
 
 .container {
@@ -60,10 +59,22 @@ html {
         }
     }
 
+@media only screen and (max-width: 23.43em) {
+        .container {
+            grid-template-columns: 33px auto;
+        }
+    }
+
 .sidebar {
     display: grid;
     grid-template-columns: 7rem auto;
     position: relative;
+}
+
+@media only screen and (max-width: 56.25em) {
+    .sidebar {
+        /* grid-template-columns: 7.5rem auto; */
+    }
 }
 
 .sidebar_1 {
@@ -233,8 +244,12 @@ html {
 
 @media only screen and (max-width: 23.43em) {
     .menu-toggle {
-        left: 100%;
-        
+        left: 90%; 
+    }
+}
+@media only screen and (max-width: 30.25em) {
+    .menu-toggle {
+        left: 90%; 
     }
 }
 
@@ -315,7 +330,7 @@ html {
     }
 @media only screen and (max-width: 56.25em) {
     .main {
-            padding: 8rem;
+            padding: 3rem;
         }
 }
 .main_dashboard {
@@ -387,7 +402,7 @@ hr {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    
 }
 
 .board_per_green {
@@ -417,15 +432,15 @@ hr {
 
 @media only screen and (max-width: 23.43em) {
     .board_stats > div > h4{
-        font-size: 3rem;
+        font-size: 3.3rem;
     }
-
+    
     .board_stats > div > p{
-        font-size: 1.6rem;
+        font-size: 2rem;
     }
-
+    
     .board_stats > div > h4 > span{
-        font-size: 1.6rem;
+        font-size: 2rem;
     }
 }
 
@@ -437,12 +452,32 @@ hr {
     padding: 2rem;
 }
 
+@media only screen and (max-width: 56.25em) {
+    .left_bottom {
+        width: 100%;
+        height: 40rem;
+    }
+}
+
 .chart-canvas {
     width: 45rem;
     height: 20rem;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+}
+
+@media only screen and (max-width: 56.25em) {
+    .chart-canvas {
+        width: 55rem;
+        height: 30rem;
+    }
+}
+
+@media only screen and (max-width: 23.43em) {
+    .chart-canvas {
+        width: 48rem;
+    }
 }
 
 .workbreakdown_canvas {
@@ -455,9 +490,9 @@ hr {
 @media only screen and (max-width: 23.43em) {
     .workbreakdown_canvas {
         width: 45rem;
-        height: 35rem;
+        height: 25rem;
         position: relative;
-        top: -30px;
+        top: -20px;
     }
 }
 
@@ -513,19 +548,19 @@ hr {
 
 @media only screen and (max-width: 56.25em) {
         .right {
-            grid-template-rows: 30rem auto;
+            grid-template-rows: 35rem auto;
         }
 }
     
 @media only screen and (max-width: 23.43em) {
     .right {
-            grid-template-rows: 45rem auto;
+            grid-template-rows: 35rem auto;
         }
 
         .right_top {
             border-radius: 5px;
             margin-bottom: 50rem;
-            height: 45rem;
+            height: 35rem;
         }
 }
 

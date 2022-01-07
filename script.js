@@ -21,11 +21,11 @@ const data = {
       label: 'My First Dataset',
       data: [4, 8, 1, 3, 1],
       backgroundColor: [
-          'rgb(255, 99, 132)',
+          'rgb(49, 242, 145)',
           'rgb(54, 162, 235)',
-          'rgb(255, 205, 86)',
-          'rgb(255, 205, 30)',
-          'rgb(255, 205, 86)'
+          'rgb(4, 5, 19)',
+          'rgb(242, 49, 49)',
+          'rgb(128, 0, 128)'
         ],
         hoverOffset: 4,
   }]
@@ -49,6 +49,10 @@ const config = {
                 position: "right",
                 labels: {
                     boxWidth: 12,
+                font: {
+                    size: 10
+                    }
+
                 }
                 
                 
@@ -69,29 +73,29 @@ const stackData = {
         labels: [""],
         
         datasets: [{
-            data: [727],
-            backgroundColor: "rgba(63,103,126,1)",
-            hoverBackgroundColor: "rgba(50,90,100,1)",
+            label: "work",
+            data: [25],
+            backgroundColor: "rgb(49, 242, 145)",
              barThickness: 20,
              borderRadius: 200
             },{
-                data: [238],
-                backgroundColor: "rgba(163,103,126,1)",
-                hoverBackgroundColor: "rgba(140,85,100,1)",
+                label: "rework",
+                data: [15],
+                backgroundColor: "rgb(49, 219, 242)",
                 barThickness: 20,
                 borderRadius: 200
 
             },{
-                data: [1238],
-                backgroundColor: "rgba(63,203,226,1)",
-                hoverBackgroundColor: "rgba(46,185,235,1)",
+                label: "refactor",
+                data: [40],
+                backgroundColor: "rgb(4, 5, 19)",
                 barThickness: 20,
                 borderRadius: 200
             },
             {
-                data: [1238],
-                backgroundColor: "rgba(63,203,226,1)",
-                hoverBackgroundColor: "rgba(46,185,235,1)",
+                label: "Bug",
+                data: [20],
+                backgroundColor: "rgb(242, 49, 49)",
                 barThickness: 20,
                 borderRadius: 200
             }
@@ -118,6 +122,9 @@ const stackConfig = {
           position: "bottom",
           labels: {
                     boxWidth: 12,
+                    font: {
+                    size: 10
+                    }
                 }
       }
     },
@@ -167,7 +174,7 @@ const myStackChart = new Chart(
       labels: [
     'Coding',
     'Code Review',
-    'QA Review',
+    'QA Review',               
 
   ],
   datasets: [{
@@ -199,7 +206,7 @@ const myStackChart = new Chart(
       data: timeData,
       options: {
           layout: {
-            // padding: 20
+            font: 5
         },
         maintainAspectRatio: false,
         scales: {
@@ -229,6 +236,8 @@ const myStackChart = new Chart(
         },
       }
     };
+
+    Chart.defaults.font.size = 10;
 
     // render init block
     const myBarChart = new Chart(
