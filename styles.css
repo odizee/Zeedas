@@ -12,6 +12,7 @@ html {
     @media only screen and (max-width: 80em) {
         html {
             font-size: 45.25%; 
+            -webkit-text-size-adjust: none;
             
         }
     }
@@ -19,7 +20,7 @@ html {
     @media only screen and (max-width: 62.625em) {
         html {
             font-size: 40.25%; 
-            
+            -webkit-text-size-adjust: none;
         }
     }
 
@@ -27,18 +28,21 @@ html {
     @media only screen and (max-width: 56.25em) {
         html {
             font-size: 38%;
+            -webkit-text-size-adjust: none;
         }
     }
 
     @media only screen and (max-width: 30.25em) {
         html {
             font-size: 30%;
+            -webkit-text-size-adjust: none;
         }
     }
     
     @media only screen and (max-width: 23.43em) {
         html {
             font-size: 28.25%; 
+            -webkit-text-size-adjust: none;
         }
     }
     
